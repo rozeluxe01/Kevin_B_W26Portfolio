@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Academic</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+  const closeBtn = document.querySelector(".close");
+
+  window.openLightbox = function(img) {
+    lightbox.style.display = "block";
+    lightboxImg.src = img.src;
+  };
+
+  closeBtn.onclick = function () {
+    lightbox.style.display = "none";
+  };
+
+  lightbox.onclick = function (e) {
+    if (e.target === lightbox) {
+      lightbox.style.display = "none";
+    }
+  };
+
+});
+</script>
+<body>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="resume.html">Resume</a>
+  <a href="projects.html">Projects</a>
+  <a href="professional.html">Professional</a>
+  <a href="academic.html">Academic</a>
+  <a href="contact.html" >Contact</a>
+</nav>
+
+<header>
+  <h1>Academic</h1>
+</header>
+
+<section class="education">
+  <h3>WES Educational Credential Assessment</h3>
+  <img src="./src/WES_Kevin Buhain_6807326.jpg" class="preview-img" onclick="openLightbox(this)" alt="Resume image">
+  <br>
+  <br>
+  <a href="./src/WES_Kevin Buhain_6807326.pdf" target="_blank">View WES Assessment</a>
+</section>
+
+<section class="education">
+  <h3>Computer Programming and Analysis, Advanced Diploma</h3>
+  <h4>George Brown College, Toronto, ON • 2024–Present</h4>
+  <img src="./src/GBC Transcript.jpg" class="preview-img" onclick="openLightbox(this)" alt="Resume image">
+  <br>
+  <br>
+  <a href="./src/GBC Transcript.pdf" target="_blank">View GBC Transcript</a>
+</section>
+
+<section class="education">
+  <h3>Bachelor of Science, Civil Engineering</h3>
+  <h4>University of the East — Manila, Philippines • 2009–2014</h4>
+    <img src="./src/University of the East Diploma_Kevin Buhain.jpg" class="preview-img" onclick="openLightbox(this)" alt="Resume image">
+    <br><br>
+    <a href="./src/University of the East Diploma_Kevin Buhain.pdf" target="_blank">View Diploma</a>
+</section>
+
+
+<div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+</body>
+</html>

@@ -55,6 +55,13 @@ header p {
     padding: 10px 60px;
 }
 
+.education{
+    padding: 10px 60px;
+    background:#1e293b; 
+    margin:20px;
+    border-radius:10px; 
+}
+
 .links{
     padding: 10px 60px;
 }
@@ -116,6 +123,8 @@ footer {
   color: #64748b;
 }
 
-
-
-
+.file-row iframe {
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+}
